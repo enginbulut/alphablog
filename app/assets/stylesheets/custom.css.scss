@@ -1,1 +1,60 @@
 @import "bootstrap";
+
+#logo {
+  float: left;
+  font-size: 1.7em;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  font-weight: bold;
+}
+
+.center {
+  text-align: center;
+}
+
+.jumbotron {
+  background-image: asset-url("background.jpg");
+  background-size: cover;
+  height: 550px;
+}
+
+.mainPageLogo {
+  color: white;
+  font-weight: bold;
+  letter-spacing: -1px;
+}
+
+footer {
+  margin-top: 45px;
+  padding-top: 5px;
+  border-top: 1px solid #eaeaea;
+  color: #777;
+}
+
+footer a:hover {
+  color: #222;
+}
+
+footer small {
+  float: left;
+}
+
+footer ul {
+  float: right;
+  list-style: none;
+}
+
+footer ul li {
+  float: left;
+  margin-left: 15px;
+}
+
+.btn-outline-success {
+  color: #fff;
+  border-color: #fff;
+}
+
+.searchButton:hover {
+  background: border-box;
+}
