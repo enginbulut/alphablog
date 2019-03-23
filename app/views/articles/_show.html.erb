@@ -1,0 +1,24 @@
+
+<div class="card">
+    <div class="card-header center">
+        <h2 class="card-title article-title"><strong><%= obj.title %></strong></h2>
+    </div>
+    <div class="card-body">
+        <%= simple_format(obj.description) %>
+        <div class="article-actions">
+            <%= if isList == "1" 
+                    link_to "Show", article_path(obj), class:"btn btn-xs btn-success", style:"font-size: 10px;"
+                else
+                    link_to "Back to articles listing", articles_path, class:"btn btn-xs btn-success", style:"font-size: 10px;"
+                end
+            %>
+            <%= link_to "Edit this article", edit_article_path(obj), class:"btn btn-xs btn-primary", style:"font-size: 10px;" %>
+            <%= link_to "Delete this article", 
+                article_path(obj), method: :delete, 
+                data: { confim:"Are you sure you want to delete the article?"}, 
+                class:"btn btn-xs btn-danger", 
+                style:"font-size: 10px;" 
+            %>
+        </div>
+    </div>
+</div>
