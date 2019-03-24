@@ -1,0 +1,17 @@
+<h1 align="center">All aplha bloggers </h1>
+
+<% @users.each do |user| %>
+    <div class="row" align="center">
+        <div class="col-md-4"></div>
+        <div class="col-md-4 card">
+            <ul class="listing">
+                <li><%= link_to gravatar_for(user), user_path(user) %></li>
+                <li class="article-title">
+                    <%= link_to user.username, user_path(user) %>
+                </li>
+                <li><small><%= pluralize(user.articles.count, "article") if user.articles %></small></li>
+            </ul>
+        </div>
+        <div class="col-md-4"></div>
+    </div>
+<% end %>

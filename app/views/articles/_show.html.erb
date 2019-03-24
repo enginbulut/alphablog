@@ -4,6 +4,19 @@
         <h2 class="card-title article-title"><strong><%= obj.title %></strong></h2>
     </div>
     <div class="card-body">
+        <div class="row" align="center">
+            <div class="col-md-4"></div>
+            <div class="col-md-4">
+                <ul class="listing">
+                    <li><%= link_to gravatar_for(obj.user), user_path(obj.user) %></li>
+                    <li class="article-title">
+                        <%= link_to obj.user.username, user_path(obj.user) %>
+                    </li>
+                    <li><small><%= pluralize(obj.user.articles.count, "article") if obj.user.articles %></small></li>
+                </ul>
+            </div>
+            <div class="col-md-4"></div>
+        </div>                                  
         <%= simple_format(obj.description) %>
         <div class="article-meta-details">
             <small>Created by: <%= obj.user.username if obj.user %>,
