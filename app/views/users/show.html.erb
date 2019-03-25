@@ -8,8 +8,11 @@
 </div>
 <h4 align="center"><%= @user.username%>'s articles</h4>
 
-<% @user.articles.each do |article|%>
+<div align="center"><%= will_paginate @user_articles, list_classes: %w(pagination justify-content-center) %></div>
+
+<% @user_articles.each do |article|%>
     <%= render 'articles/show', obj:article, isList:"1" %>
 <% end %>
 
+<div align="center"><%= will_paginate @user_articles, list_classes: %w(pagination justify-content-center) %></div>
 

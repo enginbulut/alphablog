@@ -1,5 +1,7 @@
 <h1 align="center">All aplha bloggers </h1>
 
+<div align="center"><%= will_paginate list_classes: %w(pagination justify-content-center) %></div>
+
 <% @users.each do |user| %>
     <div class="row" align="center">
         <div class="col-md-4"></div>
@@ -15,3 +17,5 @@
         <div class="col-md-4"></div>
     </div>
 <% end %>
+
+<div align="center"><%= will_paginate list_classes: %w(pagination justify-content-center) %></div>

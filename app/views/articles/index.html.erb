@@ -1,6 +1,9 @@
 <h1 align="center">Listing all articles</h1>
 
+<div align="center"><%= will_paginate list_classes: %w(pagination justify-content-center) %></div>
 
 <% @articles.each do |article|%>
     <%= render 'show', obj:article, isList:"1" %>
 <% end %>
+
+<div align="center"><%= will_paginate list_classes: %w(pagination justify-content-center) %></div>
