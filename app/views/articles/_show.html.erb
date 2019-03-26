@@ -24,7 +24,7 @@
                     last updated <%= time_ago_in_words(obj.updated_at) %> ago
             </small>
         </div>
-        <% if logged_in? && current_user==obj.user%>
+        <% if logged_in? && (current_user==obj.user || current_user.admin?)%>
             <div class="article-actions">
                 <%= if isList == "1" 
                         link_to "Show", article_path(obj), class:"btn btn-xs btn-success", style:"font-size: 10px;"
